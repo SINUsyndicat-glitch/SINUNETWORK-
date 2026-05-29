@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عملة SINU | الموقع الرسمي</title>
+    <style>
+        :root {
+            --primary-color: #0052ff; /* اللون الأزرق الرسمي لشبكة Base */
+            --accent-color: #00ffcc;  /* لون ألوان التأكيد الأخضر المضيء */
+            --bg-color: #0a0c10;
+            --card-bg: #141822;
+            --text-color: #ffffff;
+            --text-muted: #8a99ad;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* الهيدر العلوي */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1e2638;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffffff, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* قسم الواجهة الرئيسي (Hero) */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        /* تنسيق شعار الصقر الفرعوني الفاخر */
+.hero .main-logo {
+    width: 260px; /* حجم مثالي ومريح للعين يبرز تفاصيل الأجنحة والكتابة */
+    height: auto;
+    display: block;
+    margin: 0 auto 24px auto;
+    /* إضافة وهج ذهبي ناعم يتماشى مع هيبة الصقر وثيم الـ Web3 */
+    filter: drop-shadow(0 0 20px rgba(193, 170, 61, 0.35)); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* تأثير تفاعلي مبهر عند تمرير الماوس */
+.hero .main-logo:hover {
+    transform: scale(1.04); /* تكبير خفيف وسلس */
+    filter: drop-shadow(0 0 35px rgba(193, 170, 61, 0.7)); /* زيادة إضاءة التوهج الذهبى */
+}
+
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .badge-renounced {
+            display: inline-block;
+            background-color: rgba(0, 255, 204, 0.1);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0042cc;
+            box-shadow: 0 0 15px rgba(0, 82, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #334155;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1e293b;
+            border-color: var(--text-muted);
+        }
+
+        /* شبكة المعلومات */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #1e2638;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            color: var(--text-muted);
+            padding-right: 10px;
+        }
+
+        .card ul li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+            border-top: 1px solid #1e2638;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <img src="logo.png" alt="SINU Logo" class="logo-img">
+                <span class="logo-text">SINU</span>
+            </div>
+            <div>
+                <span style="color: var(--text-muted); font-size: 14px;">الشبكة: <b>Base</b></span>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="badge-renounced">✓ تم التنازل عن الملكية بالكامل (Ownership Renounced)</div>
+            <br>
+            
+            <img src="logo.png" alt="شعار عملة SINU الرسمي" class="main-logo">
+            
+            <h1>مرحباً بكم في مجتمع SINU</h1>
+            <p>عملة رقمية لامركزية بالكامل ومدارة بواسطة المجتمع على شبكة Base الجيل القادم. عقد ذكي آمن ومقاوم للتلاعب بعد التنازل التام عن صلاحيات المطور.</p>
+            
+            <!-- قسم عنوان العقد الذكي -->
+<div style="margin: 20px auto; max-width: 500px; background: #141822; padding: 10px; border-radius: 8px; border: 1px dashed #0052ff;">
+    <span style="color: #8a99ad; font-size: 14px; display: block;">عنوان العقد الرسمي (CA):</span>
+    <code style="color: #00ffcc; font-size: 14px; word-break: break-all;">0x56bB247c424958948B63de291A0C7f45d8651B76</code>
+</div>
+
+            
+            <div class="cta-buttons">
+                <a href="https://app.uniswap.org/swap/?chain=base&outputCurrency=0x56bB247c424958948B63de291A0C7f45d8651B76" target="_blank" class="btn btn-primary">شراء عبر Uniswap</a>
+                <a href="https://basescan.org/address/0x56bB247c424958948B63de291A0C7f45d8651B76" target="_blank" class="btn btn-secondary">إثبات التنازل (BaseScan)</a>
+            </div>
+        </section>
+
+        <div class="sections-grid">
+            <div class="card">
+                <h3>اقتصاد العملة (Tokenomics)</h3>
+                <ul>
+                    <li><b>العقد (Contract):</b> آمن ومثبت عاماً.</li>
+                    <li><b>الضرائب (Tax):</b> 0% لشراء والبيع لضمان تداول عادل.</li>
+                    <li><b>السيولة:</b> السيولة أولية مؤمنة والملكية عامة بنسبة 100%.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>خريطة الطريق (Roadmap)</h3>
+                <ul style="list-style-type: none;">
+                    <li>⏳ <b>المرحلة 1:</b> إطلاق العقد الذكي والتنازل عنه نهائياً (تم بنجاح).</li>
+                    <li>🚀 <b>المرحلة 2:</b> إطلاق الواجهة البرمجية على GitHub وتوسيع قاعدة المجتمع.</li>
+                    <li>🎮 <b>المرحلة 3:</b> بدء دمج آليات التطبيقات وألعاب الـ Web3 التنافسية.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 عملة SINU. مشروع مجتمعي لامركزي بالكامل.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
