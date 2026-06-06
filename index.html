@@ -278,6 +278,17 @@
             <p>&copy; 2026 عملة SINU. مشروع مجتمعي لامركزي بالكامل.</p>
         </footer>
     </div>
+    <script>
+    const lockExpiryDate = new Date("2026-12-31T00:00:00").getTime();
+    function updateTimer() {
+        const now = new Date().getTime();
+        const timeLeft = lockExpiryDate - now;
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        document.getElementById("lockCountdown").innerText = days + " يوماً من الأمان المتبقي";
+    }
+    updateTimer();
+    </script>
+    
 
 </body>
 </html>
