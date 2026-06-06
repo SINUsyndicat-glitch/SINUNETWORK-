@@ -240,11 +240,20 @@
     <span style="color: #8a99ad; font-size: 14px; display: block;">عنوان العقد الرسمي (CA):</span>
     <code style="color: #00ffcc; font-size: 14px; word-break: break-all;">0x56bB247c424958948B63de291A0C7f45d8651B76</code>
 </div>
-<div class="security-section">
-    <h3 style="color: #38bdf8;">أمان السيولة</h3>
-    <p id="lockCountdown">جاري التحقق من فترة القفل...</p>
-    <a href="https://basescan.org/address/0x56bB247c424958948b63de291a0c7f45d8651b76" target="_blank" class="btn-verify">تحقق عبر BaseScan</a>
+            <div class="security-section">
+    <h3 style="color: #38bdf8;">موعد فك قفل السيولة</h3>
+    
+    <div id="countdown" style="font-size: 1.5em; font-weight: bold; color: #ffffff; margin: 15px 0;">
+        جاري تحميل البيانات...
+    </div>
+    
+    <a href="https://basescan.org/address/0x56bB247c424958948b63de291a0c7f45d8651b76#code" 
+       target="_blank" 
+       class="btn-verify">
+       تحقق من عقد القفل على BaseScan
+    </a>
 </div>
+
 
 
             
@@ -278,17 +287,28 @@
             <p>&copy; 2026 عملة SINU. مشروع مجتمعي لامركزي بالكامل.</p>
         </footer>
     </div>
+    
     <script>
-    const lockExpiryDate = new Date("2026-12-31T00:00:00").getTime();
+    // هذا التاريخ هو موعد انتهاء القفل (بعد 548 يوماً من الآن)
+    const targetDate = new Date("2027-12-06T00:00:00Z").getTime();
+
     function updateTimer() {
         const now = new Date().getTime();
-        const timeLeft = lockExpiryDate - now;
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        document.getElementById("lockCountdown").innerText = days + " يوماً من الأمان المتبقي";
+        const diff = targetDate - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = days + " يوم، " + hours + " س، " + minutes + " د، " + seconds + " ث";
     }
-    updateTimer();
-    </script>
     
+    // تحديث العداد كل ثانية
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
+
 
 </body>
 </html>
